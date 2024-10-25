@@ -28,12 +28,6 @@ public interface CarRepository {
     //получить список свободных машин
     MyList<Car> getFriCars();
 
-    //UPDATE
-    // boolean (удалось/неудалось)
-    boolean updateCarModel(int id, String model);
-
-    boolean takeCar(int id);
-
     //DELETE
-    Car deleteCar(int id);
+    void deleteCar(Car car);
 }

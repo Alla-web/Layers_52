@@ -62,4 +62,19 @@ public class Car {
                 ", isBusy=" + isBusy +
                 '}';
     }
+
+    //переопределили метод equals для безопасного сравнения объектов
+    @Override
+    public final boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Car)) return false;
+
+        Car car = (Car) o;
+        return id == car.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
 }

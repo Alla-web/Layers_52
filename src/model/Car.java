@@ -14,7 +14,7 @@ public class Car {
         this.model = model;
         this.year = year;
         this.price = price;
-
+        //this.isBusy = false; не пишем, т.к. по умолчанию у типа boolean значение false
     }
 
     //getters
@@ -52,6 +52,8 @@ public class Car {
     }
 
     //methods
+
+
     @Override
     public String toString() {
         return "Car{" +

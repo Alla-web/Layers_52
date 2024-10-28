@@ -54,10 +54,11 @@ public class MainServiсeImpl implements MainService {
     public boolean takeCar(int id) {
         //получить машину из репозитория
         Car car = repositoryCar.getCarById(id);
+        //if (car == null && !car.isBusy()) return ;
         // TODO доделать
         /*
         проверить, что она найдена и свободна,
-        если нет- закончсить, если да:
+        если нет- закончить, если да:
         пометить машину как занятую,
         добавить машину в список машин текущего пользователя(корпоративный клиент)
 
@@ -78,7 +79,7 @@ public class MainServiсeImpl implements MainService {
 
     @Override
     public User registerUser(String email, String password) {
-        // добавить валидацию емайла
+        // добавить валидацию емайла и пассворда
         // если не прошла валидация - закончитьработу метода, вернуть налл
 
         if (repositoryUser.isEmailExist(email)) {

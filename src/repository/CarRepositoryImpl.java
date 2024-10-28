@@ -33,7 +33,7 @@ public class CarRepositoryImpl implements CarRepository {
     //methods
     @Override
     public void addCar(String model, int year, double price) {
-        //currentId.getAndIncrement() -> аналог currentId++; - получает текущий id и увеличивает его на +1
+        //currentId.getAndIncrement() -> аналог currentId++; - получает текущий id и увеличивает его на 1
         Car car = new Car(currentId.getAndIncrement(), model, year, price);
         cars.add(car); // сохранение в хранилище
     }

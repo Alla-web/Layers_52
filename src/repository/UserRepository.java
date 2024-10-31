@@ -13,5 +13,4 @@ public interface UserRepository {
     // получить имейл юзера
     User getUserEmail(String email);
 
-
 }

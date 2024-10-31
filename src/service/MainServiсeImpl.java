@@ -52,20 +52,21 @@ public class MainServiсeImpl implements MainService {
 
     @Override
     public boolean takeCar(int id) {
-        //получить машину из репозитория
-        Car car = repositoryCar.getCarById(id);
-        //if (car == null && !car.isBusy()) return ;
-        // TODO доделать
         /*
+        получить машину из репозитория
         проверить, что она найдена и свободна,
         если нет- закончить, если да:
         пометить машину как занятую,
         добавить машину в список машин текущего пользователя(корпоративный клиент)
-
          */
-
-
-        return false;
+        Car car = repositoryCar.getCarById(id);
+        if (car == null || car.isBusy()) {
+            return false;
+        } else {
+            car.setBusy(true); //пометили машину как занятая
+            activeUser.getUserCars().add(car); //добавили машину в список машин юзера
+            return true;
+        }
     }
 
     @Override

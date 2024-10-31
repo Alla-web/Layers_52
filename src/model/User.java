@@ -55,8 +55,8 @@ public class User {
     public String toString() {
         return "User{" +
                 "email='" + email + '\'' +
-                ", userCars=" + userCars +
-                ", role=" + role +
+                ", userCars = " + userCars +
+                ", role = " + role +
                 '}';
     }
 }

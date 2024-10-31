@@ -52,8 +52,6 @@ public class Car {
     }
 
     //methods
-
-
     @Override
     public String toString() {
         return "Car{" +
